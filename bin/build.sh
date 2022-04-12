@@ -91,7 +91,7 @@ for recipe in $recipes; do
 done
 
 # promote all assets in staging
-mv ${stagingoutdir}/node-v* ${distoutdir}
+mv ${stagingoutdir}/node-v*.xz ${distoutdir}
 # generate SHASUM256.txt
 (cd "${distoutdir}" && shasum -a256 $(ls node* 2> /dev/null) > SHASUMS256.txt) || exit 1
 echo "Generating indexes (this may error if there is no upstream tag for this build)"
